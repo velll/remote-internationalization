@@ -19,7 +19,7 @@ services:
     depends_on:
       - minio
     volumes:
-      - ./spec/examples:/examples
+      - ./spec/examples/remote:/examples
     entrypoint: >
       /bin/sh -c "
       /usr/bin/mc config host add myminio http://minio:9080 admin admin_pass!;

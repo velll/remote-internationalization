@@ -1,0 +1,7 @@
+en:
+  hello: Hello World (from outside)
+  many:
+    levels:
+      of:
+        hierarchy: "have lead us to this? I can't even see it from here"
+  variables: "supported remote %{affirmation}" 
