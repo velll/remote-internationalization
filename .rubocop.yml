@@ -1,0 +1,32 @@
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 90
+
+AllCops:
+  Exclude:
+    - "spec/spec_helper.rb"
+    - "lib/spinup/cli.rb"
+    - "Gemfile"
+    - "Rakefile"
+    - "spinup.gemspec"
+  TargetRubyVersion: 3.1.4
