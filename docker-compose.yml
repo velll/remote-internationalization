@@ -24,11 +24,13 @@ services:
       /bin/sh -c "
       /usr/bin/mc config host add myminio http://minio:9080 admin admin_pass!;
       /usr/bin/mc mb myminio/locale-storage-dev;
-      /usr/bin/mc anonymous set download myminio/locale-storage-dev;
+      /usr/bin/mc anonymous set public myminio/locale-storage-dev;
       /usr/bin/mc cp /examples/* myminio/locale-storage-dev/;
+      /usr/bin/mc admin user add myminio devclient verysecret;
+      /usr/bin/mc admin user svcacct add myminio --access-key "DEV-ACCESSKEYID" --secret-key "DEV-SECRETACCESSKEY" devclient;
+      /usr/bin/mc admin policy attach myminio readonly --user devclient;
       exit 0
-      "
-    
+      "    
 
 volumes:
   minio:       
