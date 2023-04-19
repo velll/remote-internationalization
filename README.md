@@ -9,7 +9,7 @@ Falls back to local translation files in case of network issues while accessing 
 
 The gem uses `I18n` under the hood and the `aws-sdk-s3` client for downloading translations from S3 compatible storage.
 
-# Initializing
+# Initializing and Usage
 
 The gem requires configuration and initializing, put it somewhere that runs on startup (e.g. `config/initializers`):
 
@@ -30,6 +30,18 @@ The gem requires configuration and initializing, put it somewhere that runs on s
   )
 
   RemoteInternationalization::Initialize.call
+```
+
+`RemoteInternationalization` defines a short alias `RI`
+
+After initializing call `t` for translating a key as usual:
+```ruby
+RI.t(:key)
+```
+
+Switch locales using the block form of `with_locale`
+```ruby
+RI.with_locale(:en) { RI.t(:key) }
 ```
 
 ### Adapter settings
