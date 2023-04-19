@@ -1,13 +1,17 @@
 class RemoteInternationalization
   module Initialize
-    extend self
+    module_function
+
     extend RemoteInternationalization::Logger
 
     def call
-      I18n.load_path = Setup.fallback_path
+      load!
 
       logger.info("RemoteInternationalization initialized with default locale: #{RemoteInternationalization.default_locale}")
-      RemoteInternationalization.new
+    end
+
+    def load!
+      I18n.load_path = PrepareFiles.call
     end
   end
 end

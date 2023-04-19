@@ -1,0 +1,7 @@
+en:
+  hello: Hello World
+  many:
+    levels:
+      of:
+        hierarchy: "have lead us to this?"
+  variables: "supported %{affirmation} " 

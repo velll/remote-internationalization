@@ -20,7 +20,13 @@ Style/ParallelAssignment:
   Enabled: false
 
 Layout/LineLength:
-  Max: 90
+  Max: 160
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/BlockLength:
+  Max: 30
 
 AllCops:
   Exclude:
@@ -30,3 +36,4 @@ AllCops:
     - "Rakefile"
     - "spinup.gemspec"
   TargetRubyVersion: 3.1.4
+  NewCops: disable

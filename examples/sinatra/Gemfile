@@ -1,0 +1,8 @@
+# Gemfile
+source 'https://rubygems.org'
+
+gem 'remote-internationalization', path: '../../'
+gem 'sinatra'
+gem 'puma'
+gem 'nokogiri'
+gem 'pry'
