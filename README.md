@@ -73,6 +73,8 @@ The server should provide an S3 compatible interface for downloading files.
 
 # End of Readme :) 
 
+Hey Manuel!
+
 ## Running tests
 
 Tests rely on a running instance of minio. Good news is everything is packed in the `docker-compose.yml`
@@ -84,6 +86,14 @@ Tests are written with rspec
 ```bash
 rspec
 ```
+
+## See it running
+
+I included an example of a sinatra app in [/examples](/examples/sinatra). Readme contains instructions on starting it up.
+The app initializes this library and renders a couple of translated strings.
+
+As tests it relies on the `minio` instance from this folder.
+
 # Out of scope
 
 Following are some thoughts on the take home task, and some more context on design decisions and the corners I have cut
