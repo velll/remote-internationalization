@@ -15,6 +15,14 @@ Start up the server
 bundle exec ruby app.rb
 ```
 
+## Choosing locale
+
+The application is choosing the current locale using the `locale` query parameter. The default is english
+
+```url
+http://localhost:4567/?locale=de
+```
+
 ## Simulating network outage
 
 Start minio first.
