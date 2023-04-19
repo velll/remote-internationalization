@@ -1,7 +1,0 @@
-de:
-  hello: Hallo Welt (from outside)
-  many:
-    levels:
-      of:
-        hierarchy: "haben uns dazu geführt. Ich kann das nicht sehen"
-  variables: "supported remote %{affirmation} " 
