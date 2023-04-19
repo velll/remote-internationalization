@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 3.1.4'
   spec.add_dependency 'i18n'
+  spec.add_dependency 'aws-sdk-s3'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
