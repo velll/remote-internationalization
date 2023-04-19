@@ -1,15 +1,16 @@
 require 'i18n'
+require 'logger'
+
 
 require 'remote-internationalization/version'
 require 'remote-internationalization/proxy'
+require 'remote-internationalization/logger'
 require 'remote-internationalization/setup'
+require 'remote-internationalization/initialize'
+
 
 class RemoteInternationalization
   class Error < StandardError; end
 
-  include RemoteInternationalization::Proxy
-
-  def initialize(fallback_path: 'spec/examples/local', client: nil)
-    I18n.load_path += Dir["#{File.expand_path(fallback_path)}/*.yml"]
-  end
+  extend Proxy
 end

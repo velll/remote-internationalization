@@ -1,13 +1,21 @@
 RSpec.describe RemoteInternationalization do
-  subject(:instance) { RemoteInternationalization.new }
+  before(:all) do
+    RemoteInternationalization::Setup.call(
+      adapter: :s3,
+      host: 'localhost',
+      fallback_path: 'spec/examples/local/'
+    )
+
+    RemoteInternationalization::Initialize.call
+  end
 
   it 'translates' do
-    expect(instance.t(:hello)).to eq('Hello World')
+    expect(described_class.t(:hello)).to eq('Hello World')
   end
 
   it 'allows the choice of a locale' do
-    instance.with_locale(:de) do
-      expect(instance.t(:hello)).to eq('Hallo Welt')
+    described_class.with_locale(:de) do
+      expect(described_class.t(:hello)).to eq('Hallo Welt')
     end
   end
 end
